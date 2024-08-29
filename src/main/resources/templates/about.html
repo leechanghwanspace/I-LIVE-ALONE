@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABOUT</title>
+    <link rel="stylesheet" th:href="@{/css/about.css}" type="text/css">
+</head>
+<body>
+<div class="container">
+    <div class="section section1">
+        <div class="header">
+            <h1><a th:href="@{/}">I L A</a></h1>
+            <div class="nav">
+                <ul>
+                    <li><a th:href="@{/}" id="main">MAIN</a></li>
+                    <li><a th:href="@{/about}" id="about">ABOUT</a></li>
+                    <li><a th:href="@{/place}" id="place">PLACE</a></li>
+                    <li><a th:href="@{/info}" id="info">INFO</a></li>
+                    <li><a th:href="@{/search}" id="search">🔎</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="rectangle">
+            <p>I L A : I live alone [나 혼자 산다]
+                <br>
+                <br>
+                <br>아일라란?
+                <br>
+                <br>
+                <br> 늘어나고 있는 '1인가구'를 겨냥해
+                <br> 남녀노소 혼자 사는 '1인가구'들을 위하여
+                <br> 주변 장소, 서비스 정보 등을 제공합니다.
+            </p>
+            <button id="place-btn">PLACE</button>
+            <button id="info-btn">SERVICE INFO</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>
+            Copyright © 2024 I LIVE ALONE. All Rights Reserved. Designed & Developed by
+            <span id="author-link" style="cursor: pointer; color: white; text-decoration: underline;" onclick="openInstagram()">ChangHwan Lee</span>
+        </p>
+    </footer>
+</div>
+<script th:src="@{/js/about.js}"></script>
+</body>
+</html>

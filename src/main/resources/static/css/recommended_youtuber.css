@@ -1,0 +1,140 @@
+@font-face {
+  font-family: 'abster';
+  src: url(/font/abster-webfont.woff) format('woff');
+}
+
+
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .section {
+        height: 100vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+.section1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0,0,0,0.5)), url(/image/info.jpg);
+    background-size: cover; /* 이미지가 전체 영역을 덮도록 설정 */
+    background-position: center; /* 이미지를 가운데 정렬 */
+}
+
+    .container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container .header{
+        width: 80%;
+        height: 80px;
+        margin:0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .container .header h1 a{
+        text-decoration: none;
+        color:white;
+        font-family: abster;
+    }
+
+    .container .nav ul li{
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+    .container .nav ul li a{
+        text-decoration: none;
+        color:white;
+    }
+
+    .container .nav ul li a:hover{
+        color:#1fdfdf;
+    }
+
+    .footer {
+        position: fixed;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        font-style: italic;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        text-align: center;
+        z-index: 9999;
+    }
+
+.rectangle {
+    width: 80&; /* 너비 설정 */
+    height: 80%; /* 높이 설정 */
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.categories {
+    display: flex;
+    flex-wrap: wrap; /* 가로 세로 비율 유지를 위해 추가 */
+    justify-content: center;
+    align-items: center;
+}
+
+.category-box:before {
+    content: "";
+    display: block;
+    padding-bottom: 175%; /* 가로세로 비율을 유지하기 위한 비율 조절 */
+}
+
+.category-box {
+    width: 800px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0);
+    border:5px solid #ffffff;
+    margin-top: 33px;
+    margin-right: 500px; /* 왼쪽 마진 추가 */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-decoration: none;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, background-color 0.3s, transform 0.2s;
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+}
+
+.category-box:hover {
+    border-color: #1fdfdf;
+    background: linear-gradient(rgba(31, 253, 223, 0.105),rgba(31,253,223,0.105));
+    transition-delay: 0.1s; /* 변경 사항: transition-delay 속성 추가 */
+    transform: scale(1.1); /* 변경 사항: 색이 들어올 때 조금 확대되는 효과 추가 */
+}
+.category-box span {
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.category-box:hover span {
+    color: #1fdfdf; /* 마우스를 올렸을 때 폰트 색 변경 */
+}
+
+.square {
+    width: 450px;
+    height: 500px;
+    background-color: #ccc;
+    margin-left: 1000px;
+    margin-top: -500px;
+    border-radius: 30px;
+}

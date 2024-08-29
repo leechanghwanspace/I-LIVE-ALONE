@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLACE</title>
+    <link rel="stylesheet" th:href="@{/css/place.css}" type="text/css">
+</head>
+<body>
+<div class="container">
+    <div class="section section1">
+        <div class="header">
+            <h1><a th:href="@{/}">I L A</a></h1>
+            <div class="nav">
+                <ul>
+                    <li><a th:href="@{/}" id="main">MAIN</a></li>
+                    <li><a th:href="@{/about}" id="about">ABOUT</a></li>
+                    <li><a th:href="@{/place}" id="place">PLACE</a></li>
+                    <li><a th:href="@{/info}" id="info">INFO</a></li>
+                    <li><a th:href="@{/search}" id="search">🔎</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="rectangle">
+            <div class="categories">
+                <a th:id="daiso" th:href="@{/daiso}" class="category-box"
+                   onmouseover="changeCategory('daiso', '다이소')"
+                   onmouseout="resetCategory('daiso', 'DAISO')">
+                    <span>DAISO</span>
+                </a>
+                <a th:id="cafe" th:href="@{/cafe}" class="category-box"
+                   onmouseover="changeCategory('cafe', '카페')"
+                   onmouseout="resetCategory('cafe', 'CAFE')">
+                    <span>CAFE</span>
+                </a>
+                <a th:id="laundryroom" th:href="@{/laundry_room}" class="category-box"
+                   onmouseover="changeCategory('laundryroom', '세탁방')"
+                   onmouseout="resetCategory('laundryroom', 'LAUNDRY ROOM')">
+                    <span>LAUNDRY ROOM</span>
+                </a>
+                <a th:id="conveniencestore" th:href="@{/convenience_store}" class="category-box"
+                   onmouseover="changeCategory('conveniencestore', '편의점')"
+                   onmouseout="resetCategory('conveniencestore', 'CONVENIENCE STORE')">
+                    <span>CONVENIENCE <br>STORE</span>
+                </a>
+                <a th:id="restaurant" th:href="@{/restaurant}" class="category-box"
+                   onmouseover="changeCategory('restaurant', '식당')"
+                   onmouseout="resetCategory('restaurant', 'RESTAURANT')">
+                    <span>RESTAURANT</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>
+            Copyright © 2024 I LIVE ALONE. All Rights Reserved. Designed & Developed by
+            <span id="author-link" style="cursor: pointer; color: white; text-decoration: underline;" onclick="openInstagram()">ChangHwan Lee</span>
+        </p>
+    </footer>
+</div>
+<script th:src="@{/js/place.js}"></script>
+</body>
+</html>

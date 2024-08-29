@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I L A</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" type="text/css">
+</head>
+<body>
+<div class="container">
+    <div class="section section1">
+        <div class="header">
+            <h1><a th:href="@{/}">I L A</a></h1>
+            <div class="nav">
+                <ul>
+                    <li><a th:href="@{/}" id="main">MAIN</a></li>
+                    <li><a th:href="@{/about}" id="about">ABOUT</a></li>
+                    <li><a th:href="@{/place}" id="place">PLACE</a></li>
+                    <li><a th:href="@{/info}" id="info">INFO</a></li>
+                    <li><a th:href="@{/search}" id="search">🔎</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="hero">
+            <h2></h2>
+            <p id="hero-text"><br>I L A ,<br>" It is for people who live alone "<br> <br>
+            </p>
+        </div>
+    </div>
+
+    <div class="section section2">
+        <div class="section-overlay">
+            <h2>Are you curious about the features of the ILA?</h2>
+            <p id="coop-comp-button">Press the WATCH MORE button.<br></p>
+            <div class="buttonhero">
+                <button id="watch-more">WATCH MORE</button>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <p>
+            Copyright © 2024 I LIVE ALONE. All Rights Reserved. Designed & Developed by
+            <span id="author-link" style="cursor: pointer; color: white; text-decoration: underline;" onclick="openInstagram()">ChangHwan Lee</span>
+        </p>
+    </footer>
+</div>
+<script th:src="@{/js/index.js}"></script>
+</body>
+</html>

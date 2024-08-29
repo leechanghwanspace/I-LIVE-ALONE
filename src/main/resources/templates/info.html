@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INFO</title>
+    <link rel="stylesheet" th:href="@{/css/info.css}" type="text/css">
+</head>
+<body>
+<div class="container">
+    <div class="section section1">
+        <div class="header">
+            <h1><a th:href="@{/}">I L A</a></h1>
+            <div class="nav">
+                <ul>
+                    <li><a th:href="@{/}" id="main">MAIN</a></li>
+                    <li><a th:href="@{/about}" id="about">ABOUT</a></li>
+                    <li><a th:href="@{/place}" id="place">PLACE</a></li>
+                    <li><a th:href="@{/info}" id="info">INFO</a></li>
+                    <li><a th:href="@{/search}" id="search">🔎</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="rectangle">
+            <div class="categories">
+                <a th:id="hospital" th:href="@{/hospital}" class="category-box"
+                   onmouseover="changeCategory('hospital', '병원')"
+                   onmouseout="resetCategory('hospital', 'HOSPITAL')">
+                    <span>HOSPITAL</span>
+                </a>
+                <a th:id="subwaystation" th:href="@{/subway_station}" class="category-box"
+                   onmouseover="changeCategory('subwaystation', '지하철역')"
+                   onmouseout="resetCategory('subwaystation', 'SUBWAY STATION')">
+                    <span>SUBWAY STATION</span>
+                </a>
+                <a th:id="regionalportal" th:href="@{/regional_portal}" class="category-box"
+                   onmouseover="changeCategory('regionalportal', '지역별 포털')"
+                   onmouseout="resetCategory('regionalportal', 'REGIONAL PORTAL')">
+                    <span>REGIONAL PORTAL</span>
+                </a>
+                <a th:id="community" th:href="@{/posts}" class="category-box"
+                   onmouseover="changeCategory('community', '커뮤니티')"
+                   onmouseout="resetCategory('community', 'COMMUNITY')">
+                    <span>COMMUNITY</span>
+                </a>
+                <a th:id="recommended" th:href="@{/recommended_youtuber}" class="category-box"
+                   onmouseover="changeCategory('recommended', '추천 유튜버')"
+                   onmouseout="resetCategory('recommended', 'RECOMMENDED YOUTUBER')">
+                    <span>RECOMMENDED <br>YOUTUBER</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>
+            Copyright © 2024 I LIVE ALONE. All Rights Reserved. Designed & Developed by
+            <span id="author-link" style="cursor: pointer; color: white; text-decoration: underline;" onclick="openInstagram()">ChangHwan Lee</span>
+        </p>
+    </footer>
+</div>
+<script th:src="@{/js/info.js}"></script>
+</body>
+</html>

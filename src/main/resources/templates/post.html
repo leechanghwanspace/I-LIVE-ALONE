@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${post.title}">게시글</title>
+    <link rel="stylesheet" th:href="@{/css/community.css}" type="text/css">
+</head>
+<body>
+<div class="container">
+    <div class="section section1">
+        <div class="header">
+            <h1><a th:href="@{/}">I L A</a></h1>
+            <div class="nav">
+                <ul>
+                    <li><a th:href="@{/}" id="main">MAIN</a></li>
+                    <li><a th:href="@{/about}" id="about">ABOUT</a></li>
+                    <li><a th:href="@{/place}" id="place">PLACE</a></li>
+                    <li><a th:href="@{/info}" id="info">INFO</a></li>
+                    <li><a th:href="@{/search}" id="search">🔎</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="rectangle">
+            <div class="post-content">
+                <h2 th:text="${post.title}">게시글 제목</h2>
+                <p th:text="${post.content}">게시글 내용</p>
+                <p><small th:text="${post.author}">작성자</small> | <small th:text="${post.createdAt}">작성일</small></p>
+                <hr>
+                <div class="comments" th:each="comment : ${post.comments}">
+                    <p><strong th:text="${comment.author}">작성자</strong>: <span th:text="${comment.content}">댓글 내용</span></p>
+                </div>
+                <form class="comment-form" th:action="@{/posts/{postId}/comments(postId=${post.id})}" method="post">
+                    <label for="commentAuthor">작성자 : </label>
+                    <input type="text" id="commentAuthor" name="author" required><br>
+                    <label for="commentContent">댓글 : </label>
+                    <textarea id="commentContent" name="content" required></textarea><br>
+                    <button type="submit">댓글 작성</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>
+            Copyright © 2024 I LIVE ALONE. All Rights Reserved. Designed & Developed by
+            <span id="author-link" style="cursor: pointer; color: white; text-decoration: underline;" onclick="openInstagram()">ChangHwan Lee</span>
+        </p>
+    </footer>
+</div>
+
+<script th:src="@{/js/community.js}"></script>
+</body>
+</html>

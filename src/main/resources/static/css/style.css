@@ -1,0 +1,168 @@
+@font-face {
+  font-family: 'abster';
+  src: url(/font/abster-webfont.woff) format('woff');
+}
+
+
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .section {
+        height: 100vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+.section1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0,0,0,0.5)), url(/image/main.jpg);
+    background-size: cover; /* 이미지가 전체 영역을 덮도록 설정 */
+    background-position: center; /* 이미지를 가운데 정렬 */
+    background-attachment: fixed;
+}
+
+
+
+.section2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0,0,0,0.5)), url(/image/main.jpg);
+   color: white;
+   padding: 40px;
+   text-align: center; /* 텍스트를 가운데 정렬 */
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+    .section2 h2 {
+        font-size: 35px;
+        font-style: italic;
+        margin-bottom: 20px;
+    }
+
+    #coop-comp-button {
+        font-size: 20px;
+        font-style: italic;
+        margin-bottom: 50px;
+    }
+
+    .container .buttonhero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container .buttonhero button {
+        background: none;
+        border: 3.5px solid #1fdfdf;
+        color: white;
+        width: 150px;
+        height: 50px;
+        border-radius: 20px;
+        outline: none;
+        cursor: pointer;
+        transition: all .4s;
+    }
+
+    .container .buttonhero button:hover{
+        background-color: darkslategray;
+    }
+
+    .container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container .header{
+        width: 80%;
+        height: 80px;
+        margin:0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .container .header h1 a{
+        text-decoration: none;
+        color:white;
+        font-family: abster;
+    }
+
+    .container .nav ul li{
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+    .container .nav ul li a{
+        text-decoration: none;
+        color:white;
+    }
+
+    .container .nav ul li a:hover{
+        color:#1fdfdf;
+    }
+
+    .container .hero{
+        position: absolute;
+        left:50%;
+        top:50%;
+        transform: translate(-50%, -50%);
+        color:white;
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        width: 80%;
+        max-width: 1200px;
+        padding: 0 20px;
+    }
+
+    .container .hero h2{
+        font-size: 80px;
+        margin-bottom: 20px;
+        font-style: italic;
+    }
+
+    .container .hero p{
+        font-size:20px;
+        font-style: italic;
+    }
+
+
+    .footer {
+        position: fixed;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        font-style: italic;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        text-align: center;
+        z-index: 9999;
+    }
+
+.container .section2 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .section2 .section-overlay {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 150px;
+    text-align: center;
+}
+
+.container .section2 h2,
+.container .section2 p,
+.container .section2 .buttonhero {
+    margin: 10px;
+}
+

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGIONAL PORTAL</title>
+    <link rel="stylesheet" th:href="@{/css/regional_portal.css}" type="text/css">
+</head>
+<body>
+<div class="container">
+    <div class="section section1">
+        <div class="header">
+            <h1><a th:href="@{/}">I L A</a></h1>
+            <div class="nav">
+                <ul>
+                    <li><a th:href="@{/}" id="main">MAIN</a></li>
+                    <li><a th:href="@{/about}" id="about">ABOUT</a></li>
+                    <li><a th:href="@{/place}" id="place">PLACE</a></li>
+                    <li><a th:href="@{/info}" id="info">INFO</a></li>
+                    <li><a th:href="@{/search}" id="search">🔎</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="rectangle">
+            <div class="categories">
+                <a id="seoul" href=https://1in.seoul.go.kr/front/user/main.do class="category-box" target="_blank"
+                   onmouseover="changeCategory('seoul', '서울')"
+                   onmouseout="resetCategory('seoul', 'SEOUL')">
+                    <span>SEOUL</span>
+                </a>
+                <a id="gyeonngido" href=https://www.gg.go.kr/1ingg/main.do class="category-box" target="_blank"
+                   onmouseover="changeCategory('gyeonngido', '경기도')"
+                   onmouseout="resetCategory('gyeonngido', 'GYEONNGIDO')">
+                    <span>GYEONNGIDO</span>
+                </a>
+                <a id="incheon" href=https://www.incheon.go.kr/1in/index class="category-box" target="_blank"
+                   onmouseover="changeCategory('incheon', '인천')"
+                   onmouseout="resetCategory('incheon', 'INCHEON')">
+                    <span>INCHEON</span>
+                </a>
+                <a id="busan" href=http://www.busan1.or.kr/ class="category-box" target="_blank"
+                   onmouseover="changeCategory('busan', '부산')"
+                   onmouseout="resetCategory('busan', 'BUSAN')">
+                    <span>BUSAN</span>
+                </a>
+                <a th:id="searchregion" th:href="@{/search_region}" class="category-box"
+                   onmouseover="changeCategory('searchregion', '그 외 지역')"
+                   onmouseout="resetCategory('searchregion', 'OTHER REGION')">
+                    <span>OTHER <br>REGION</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>
+            Copyright © 2024 I LIVE ALONE. All Rights Reserved. Designed & Developed by
+            <span id="author-link" style="cursor: pointer; color: white; text-decoration: underline;" onclick="openInstagram()">ChangHwan Lee</span>
+        </p>
+    </footer>
+</div>
+<script th:src="@{/js/regional_portal.js}"></script>
+</body>
+</html>
