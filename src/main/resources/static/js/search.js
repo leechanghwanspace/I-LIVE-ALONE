@@ -5,7 +5,7 @@ document.getElementById('search-form').addEventListener('submit', function(event
 });
 
 function searchGoogle(query) {
-    const apiKey = 'AIzaSyAzVbXl6GVc2x4sKljO7YKvMF7JaCe_Y1s';
+    const apiKey = '#####################';
     const cx = '233fc0a7a4adb46bb';
     const url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${cx}&q=${query}`;
 
